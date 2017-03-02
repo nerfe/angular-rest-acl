@@ -1,0 +1,13 @@
+{
+  "name": "angular-rest-acl",
+  "description": "An angular rest acl for phalcon-rest-acl.",
+  "version": "0.0.1",
+  "main": "./angular-rest-acl.js",
+  "ignore": [],
+  "author": "Pascal Precht",
+  "license": "MIT",
+  "dependencies": {
+    "angular": ">=1.2.26 <1.6",
+    "angular-ui-router": "^0.2.18",
+  }
+}
