@@ -76,7 +76,7 @@ angular.module('angular-rest-acl', ['angular-storage','ui.router'])
                   var isRole = func.isOk(rol, permission, 'hide');
                     if(!isRole.result){
                         $timeout(function(){
-                            $state.go('dashboard');
+                            $state.go('permissionDenied');
                         })
                     }
                 }
