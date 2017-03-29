@@ -100,9 +100,10 @@ angular.module('angular-rest-acl', ['angular-storage','ui.router'])
           var isRole = RestAcl.isOk(rol, scope.aclpermission, scope.aclmode);
 
           if(!isRole.result){
-            element.attr('ng-' + isRole.mode,true);
+            element.remove();
+            // element.attr('ng-' + isRole.mode,true);
           }
-          $compile(element)(scope);
+          // $compile(element)(scope);
         }
       };
     })
