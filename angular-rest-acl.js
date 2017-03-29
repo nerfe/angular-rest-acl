@@ -100,7 +100,13 @@ angular.module('angular-rest-acl', ['angular-storage','ui.router'])
           var isRole = RestAcl.isOk(rol, scope.aclpermission, scope.aclmode);
 
           if(!isRole.result){
-            element.remove();
+            if(isRole.mode== 'hide'){
+              element.remove();
+              // console.log("Nag Hide");
+            }else if(isRole.mode == 'disabled'){
+              element.attr('disabled', true);
+              // console.log("Nag Disabled");
+            }
             // element.attr('ng-' + isRole.mode,true);
           }
           // $compile(element)(scope);
